@@ -38,7 +38,7 @@
     }
     span{
         padding: .5rem 0;
-        font-size: 2vmin;
+        font-size: min(13px, 5vmin);
         font-weight: 500;
     }
     &:hover{

@@ -1,0 +1,16 @@
+.foot{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    font-weight: 600;
+    font-size: min(30px, 5vmin);
+    padding-top: 3rem;
+    svg{
+        /* border: 2px solid red; */
+        width: min(35px, 7vmin);
+    }
+    span{
+        color: var(--primary);
+    }
+}

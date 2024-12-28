@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pallete.css">
+    <link rel="stylesheet" href="front.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous"referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="dark_mode.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="sidebar.js"></script>
+    <!-- <script src="autotype.js"></script> -->
+</head>
+
+<body>
+    <div class="pallete">
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+            <button onclick="toggleDarkMode()">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" fill="rgb(75, 75, 75)"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+            </button>
+            <button class="hamburger" onclick="onClickOpen()">
+                <svg id="bars" xmlns="http://www.w3.org/2000/svg" fill="rgb(75, 75, 75)"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+        </nav>
+        <nav id="ham" class="sidebar">
+            <li onclick="onClickOpen()"><a href="">Home</a></li>
+            <li onclick="onClickOpen()"><a href="#about">About</a></li>
+            <li onclick="onClickOpen()"><a href="#skills">Skills</a></li>
+            <li onclick="onClickOpen()"><a href="#projects">Projects</a></li>
+            <li onclick="onClickOpen()"><a href="#contact">Contact</a></li>
+            <li onclick="onClickOpen()"><a href="#">Resume</a></li>
+        </nav>
+    </div>
+    <div class="front">
+        <h1 class="main_head">Hello, I am&nbsp;<span>Som Priyansu Ranjan Sahoo</span></h1>
+        <div class="container"><span class="type"></span></div>
+        <script>
+            var typed = new Typed(".type", { strings: ["Web Developer", "Java Developer", "Graphics Designer", "Tech Enthusiast"], typeSpeed: 100, backSpeed: 40, loop: true, backDelay: 2000 });
+        </script>
+
+        <div class="container" id="describe">
+            Passionate and creative Developer with proficiency in Front-End Development. Attired with a variety of tools
+            and technologies and keen to learn new one.
+        </div>
+
+        <div id="icons">
+            <!-- <li><a href=""><svg onmouseenter="fillBlue()" onmouseleave="fillNormal()" id="linkedin" xlmns="http://www.w3.org/2000/svg" fill="rgb(75, 75, 75)" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+          </svg></a></li> -->
+            <li>
+                <svg id="telephone" xmlns="http://www.w3.org/2000/svg" fill="rgb(75, 75, 75)"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+            </li>
+            <li>
+                <svg id="mail" xmlns="http://www.w3.org/2000/svg" fill="rgb(75, 75, 75)"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                </svg>
+            </li>
+        </div>
+        <button id="resume_btn"><a href="">Resume</a></button>
+    </div>
+
+
+
+    <div id="about" class="about" data-aos="fade-up">
+        <h1>About <span>Me</span></h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur harum vitae quaerat dicta unde velit
+            architecto est repellendus, commodi doloremque sunt cumque debitis iure tenetur sed aut necessitatibus nisi
+            rem obcaecati quas quidem earum aperiam ut. Facilis laudantium necessitatibus voluptatum illum unde.
+            Adipisci magnam, possimus doloribus dolor molestias consequuntur quam, aperiam itaque nobis et, mollitia
+            vitae dolorem ipsa eum non necessitatibus odit delectus facilis. Dolor iste perferendis, veniam suscipit
+            debitis in explicabo aspernatur obcaecati voluptate officia dignissimos dicta quas eius corrupti natus?
+            Porro, iure. Deserunt aspernatur impedit ratione nemo tempora praesentium, nisi quaerat porro aperiam modi
+            ipsum ad officia. Ratione repellat, tenetur ducimus aut laboriosam nisi quasi atque architecto, incidunt
+            ipsam, laudantium suscipit. Illo illum blanditiis eum voluptatibus necessitatibus in atque, mollitia nobis.
+            Soluta fuga sit deserunt molestiae nam accusamus doloremque est qui maiores aspernatur ea facere architecto
+            mollitia tenetur dolorem voluptates quas, cum cumque alias quod. Explicabo architecto doloribus vel, nostrum
+            sapiente similique quas quasi, excepturi assumenda ut numquam reiciendis eos quod aspernatur animi hic
+            impedit autem rerum odit dolorum et soluta? Optio iste reiciendis odio iure eos amet sit ab obcaecati
+            architecto qui sunt, non magni soluta earum quod, quaerat sapiente expedita. In autem atque harum obcaecati
+            cumque!</p>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, sunt.</span>
+        <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+        </ul>
+    </div>
+
+    <div id="skills">
+        <h1 data-aos="fade-up">Skills</h1>
+        <div >
+            <div class="skill" id="java" data-aos="fade-up">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-filetype-java" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.521 15.175a1.3 1.3 0 0 1-.082-.466h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466V11.85h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.568-.094 1.1 1.1 0 0 1-.408-.266 1.1 1.1 0 0 1-.243-.39m3.972-.354-.314 1.028h-.8l1.342-3.999h.926l1.336 3.999h-.84l-.314-1.028zm1.178-.59-.49-1.616h-.035l-.49 1.617zm2.342 1.618h.952l1.327-3.999h-.878l-.888 3.138h-.038L8.59 11.85h-.917zm3.087-1.028-.314 1.028h-.8l1.342-3.999h.926l1.336 3.999h-.84l-.314-1.028zm1.178-.59-.49-1.616h-.035l-.49 1.617z"/>
+                </svg>
+                <span>Java</span>
+            </div>
+            <div class="skill" id="python" data-aos="fade-up" data-aos-delay="50">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM0 11.85h1.6q.434 0 .732.179.302.175.46.477t.158.677-.16.677q-.158.299-.464.474a1.45 1.45 0 0 1-.732.173H.79v1.342H0zm2.06 1.714a.8.8 0 0 0 .085-.381q0-.34-.185-.521-.185-.182-.513-.182H.788v1.406h.66a.8.8 0 0 0 .374-.082.57.57 0 0 0 .238-.24m2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855z"/>
+                </svg>
+                <span>Python</span>
+            </div>
+            <div class="skill" id="js" data-aos="fade-up" data-aos-delay="100">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-filetype-js" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.186 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .255.384q.105.073.249.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.151-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.528-.422.336-.15.776-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.327.075.566.211.24.136.375.358t.135.56q0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033A1.3 1.3 0 0 1 0 14.791h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466v-2.745h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.569-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39"/>
+                  </svg>
+                  <span>JavaScript</span>
+            </div>
+            <div class="skill" id="react" data-aos="fade-up" data-aos-delay="150">
+                <svg version="1.1" id="Layer_1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 109.43" style="enable-background:new 0 0 122.88 109.43" xml:space="preserve"><g><path class="st0" d="M122.88,54.73c0-8.14-10.19-15.85-25.82-20.64c3.61-15.93,2-28.6-5.06-32.66c-1.63-0.95-3.53-1.4-5.61-1.4 v5.59c1.15,0,2.08,0.23,2.86,0.65c3.41,1.95,4.88,9.39,3.73,18.96c-0.28,2.35-0.73,4.83-1.28,7.36c-4.91-1.2-10.27-2.13-15.9-2.73 c-3.38-4.63-6.89-8.84-10.42-12.52C73.54,9.74,81.2,5.59,86.41,5.59V0l0,0c-6.89,0-15.9,4.91-25.02,13.43 C52.27,4.96,43.26,0.1,36.37,0.1v5.59c5.18,0,12.87,4.13,21.04,11.67c-3.51,3.68-7.01,7.86-10.34,12.5 c-5.66,0.6-11.02,1.53-15.93,2.75c-0.58-2.5-1-4.93-1.3-7.26c-1.18-9.57,0.28-17.01,3.66-18.99c0.75-0.45,1.73-0.65,2.88-0.65V0.13 l0,0c-2.1,0-4.01,0.45-5.66,1.4c-7.04,4.06-8.62,16.71-4.98,32.59C10.14,38.92,0,46.61,0,54.73c0,8.14,10.19,15.85,25.82,20.64 c-3.61,15.93-2,28.6,5.06,32.66c1.63,0.95,3.53,1.4,5.64,1.4c6.89,0,15.9-4.91,25.02-13.43c9.12,8.47,18.13,13.33,25.02,13.33 c2.1,0,4.01-0.45,5.66-1.4c7.04-4.06,8.62-16.71,4.98-32.59C112.74,70.56,122.88,62.84,122.88,54.73L122.88,54.73z M72.86,54.73 c0-6.32-5.12-11.45-11.45-11.45c-6.32,0-11.45,5.12-11.45,11.45s5.12,11.45,11.45,11.45C67.74,66.17,72.86,61.05,72.86,54.73 L72.86,54.73z M36.34,0.1L36.34,0.1L36.34,0.1L36.34,0.1z M90.27,38.02c-0.93,3.23-2.08,6.56-3.38,9.89c-1.03-2-2.1-4.01-3.28-6.01 c-1.15-2-2.38-3.96-3.61-5.86C83.56,36.57,86.99,37.22,90.27,38.02L90.27,38.02z M78.8,64.7c-1.95,3.38-3.96,6.59-6.04,9.57 c-3.73,0.33-7.51,0.5-11.32,0.5c-3.78,0-7.56-0.18-11.27-0.48c-2.08-2.98-4.11-6.16-6.06-9.52c-1.9-3.28-3.63-6.61-5.21-9.97 c1.55-3.36,3.31-6.71,5.18-9.99c1.95-3.38,3.96-6.59,6.04-9.57c3.73-0.33,7.51-0.5,11.32-0.5c3.78,0,7.56,0.18,11.27,0.48 c2.08,2.98,4.11,6.16,6.06,9.52c1.9,3.28,3.63,6.61,5.21,9.97C82.4,58.06,80.68,61.41,78.8,64.7L78.8,64.7z M86.89,61.44 c1.35,3.36,2.5,6.71,3.46,9.97c-3.28,0.8-6.74,1.48-10.32,2c1.23-1.93,2.45-3.91,3.61-5.94C84.78,65.47,85.86,63.44,86.89,61.44 L86.89,61.44z M61.49,88.16c-2.33-2.4-4.66-5.08-6.96-8.01c2.25,0.1,4.56,0.18,6.89,0.18c2.35,0,4.68-0.05,6.96-0.18 C66.12,83.08,63.79,85.76,61.49,88.16L61.49,88.16z M42.86,73.41c-3.56-0.53-6.99-1.18-10.27-1.98c0.93-3.23,2.08-6.56,3.38-9.89 c1.03,2,2.1,4.01,3.28,6.01C40.43,69.56,41.63,71.51,42.86,73.41L42.86,73.41z M61.36,21.29c2.33,2.4,4.66,5.08,6.96,8.01 c-2.25-0.1-4.56-0.18-6.89-0.18c-2.35,0-4.68,0.05-6.96,0.18C56.73,26.37,59.06,23.69,61.36,21.29L61.36,21.29z M42.83,36.04 c-1.23,1.93-2.45,3.91-3.61,5.94c-1.15,2-2.23,4.01-3.26,6.01c-1.35-3.36-2.5-6.71-3.46-9.97C35.79,37.24,39.25,36.57,42.83,36.04 L42.83,36.04z M20.16,67.4c-8.87-3.78-14.6-8.74-14.6-12.67c0-3.93,5.74-8.92,14.6-12.67c2.15-0.93,4.51-1.75,6.94-2.53 c1.43,4.91,3.31,10.02,5.64,15.25c-2.3,5.21-4.16,10.29-5.56,15.18C24.7,69.18,22.34,68.33,20.16,67.4L20.16,67.4z M33.64,103.19 c-3.41-1.95-4.88-9.39-3.73-18.96c0.28-2.35,0.73-4.83,1.28-7.36c4.91,1.2,10.27,2.13,15.9,2.73c3.38,4.63,6.89,8.84,10.42,12.52 c-8.17,7.59-15.83,11.75-21.04,11.75C35.34,103.84,34.39,103.62,33.64,103.19L33.64,103.19z M93.05,84.11 c1.18,9.57-0.28,17.01-3.66,18.99c-0.75,0.45-1.73,0.65-2.88,0.65c-5.18,0-12.87-4.13-21.04-11.67c3.51-3.68,7.01-7.86,10.34-12.5 c5.66-0.6,11.02-1.53,15.93-2.76C92.32,79.35,92.77,81.78,93.05,84.11L93.05,84.11z M102.69,67.4c-2.15,0.93-4.51,1.75-6.94,2.53 c-1.43-4.91-3.31-10.02-5.64-15.25c2.3-5.21,4.16-10.29,5.56-15.18c2.48,0.78,4.83,1.63,7.04,2.55c8.87,3.78,14.6,8.74,14.6,12.67 C117.29,58.66,111.56,63.64,102.69,67.4L102.69,67.4z"/></g></svg>
+                <span>React JS</span>
+            </div>
+            <div class="skill" id="sql" data-aos="fade-up" data-aos-delay="200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-filetype-sql" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM0 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252c.284.09.411.091.665.091q.507 0 .858-.158.355-.159.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.187-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.325q0 .165-.085.29A.56.56 0 0 1 2 15.31q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zm6.878 1.489-.507-.739q.264-.243.401-.6.138-.358.138-.806v-.501q0-.556-.208-.967a1.5 1.5 0 0 0-.589-.636q-.383-.225-.917-.225-.527 0-.914.225-.384.223-.592.636a2.14 2.14 0 0 0-.205.967v.5q0 .554.205.965.208.41.592.636a1.8 1.8 0 0 0 .914.222 1.8 1.8 0 0 0 .6-.1l.294.422h.788ZM4.262 14.2v-.522q0-.369.114-.63a.9.9 0 0 1 .325-.398.9.9 0 0 1 .495-.138q.288 0 .495.138a.9.9 0 0 1 .325.398q.115.261.115.63v.522q0 .246-.053.445-.053.196-.155.34l-.106-.14-.105-.147h-.733l.451.65a.6.6 0 0 1-.251.047.87.87 0 0 1-.487-.147.9.9 0 0 1-.32-.404 1.7 1.7 0 0 1-.11-.644m3.986 1.057h1.696v.674H7.457v-3.999h.79z"/>
+                </svg>
+                <span>SQL</span>
+            </div>
+            <div class="skill" id="git" data-aos="fade-up" data-aos-delay="50">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-git" viewBox="0 0 16 16">
+                    <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
+                </svg>
+                <span>Git</span>
+            </div>
+            <div class="skill" id="blender" data-aos="fade-up" data-aos-delay="100">
+                <svg id="Layer_1" data-name="Layer 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499.77 405.98"><defs><style>.cls-1{fill:#fff;}</style></defs><title>blender</title><path class="cls-1" d="M196.49,225.35c1.82-32.49,17.73-61.11,41.73-81.4,23.54-19.92,55.22-32.1,89.78-32.1S394.21,124,417.77,144c24,20.29,39.89,48.91,41.73,81.37,1.82,33.38-11.6,64.39-35.14,87.37-24,23.38-58.13,38.06-96.36,38.06s-72.43-14.68-96.41-38.06C208,289.71,194.66,258.7,196.49,225.35Z"/><path class="cls-2" d="M260.53,228.27c.93-16.67,9.1-31.36,21.41-41.77a72.65,72.65,0,0,1,92.13,0c12.3,10.41,20.47,25.1,21.41,41.75.93,17.13-6,33-18,44.83-12.31,12-29.83,19.53-49.44,19.53s-37.16-7.53-49.47-19.53C266.45,261.29,259.59,245.38,260.53,228.27Z"/><path class="cls-3" d="M153.08,262c.11,6.52,2.19,19.2,5.31,29.1a153.58,153.58,0,0,0,33.16,57.42,171.34,171.34,0,0,0,58,41.67A189.71,189.71,0,0,0,402,389.88,172.65,172.65,0,0,0,460,348a154.79,154.79,0,0,0,33.15-57.53,145.39,145.39,0,0,0,6.24-32.11,146.87,146.87,0,0,0-1-31.9,148.49,148.49,0,0,0-21.15-57.87,161.49,161.49,0,0,0-38.58-42.53l0,0L282.5,6.2c-.14-.11-.26-.22-.41-.32-10.24-7.86-27.47-7.83-38.73,0s-12.69,21.14-2.56,29.46l0,0,65.11,53-198.46.21h-.27C90.74,88.61,75,99.37,71.85,113c-3.21,13.86,7.93,25.36,25,25.42l0,.06,100.6-.19L17.9,276l-.69.51C.28,289.52-5.2,311.08,5.47,324.73c10.82,13.87,33.84,13.9,51,.08l98-80.18A152.15,152.15,0,0,0,153.08,262ZM404.82,298.2c-20.18,20.56-48.44,32.22-79,32.28s-58.89-11.5-79.07-32a93.92,93.92,0,0,1-21.58-33.78,87.69,87.69,0,0,1-5-37.74A89.11,89.11,0,0,1,231,191.39a98,98,0,0,1,24-28.55c19.62-16,44.6-24.65,70.73-24.68s51.12,8.54,70.76,24.48a97.5,97.5,0,0,1,24,28.46,89.19,89.19,0,0,1,10.86,35.52,87.81,87.81,0,0,1-5,37.72A94.33,94.33,0,0,1,404.82,298.2Z"/></svg>
+                <span>Blender</span>
+            </div>
+            <div class="skill" id="pp" data-aos="fade-up" data-aos-delay="150">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512.84 500.01"><defs><style>.b{fill:#fff;}</style></defs><title>adobe-premiere-pro</title><path class="a" d="M90.81,0H422a90.74,90.74,0,0,1,90.82,90.81V409.2A90.73,90.73,0,0,1,422,500H90.81A90.73,90.73,0,0,1,0,409.2V90.81A90.74,90.74,0,0,1,90.81,0Z"/><path class="b" d="M121.8,350.65V130.77c0-1.49.64-2.35,2.14-2.35,3.63,0,7.05,0,12-.21,5.13-.21,10.47-.21,16.24-.43s12-.21,18.59-.43,13-.21,19.45-.21c17.52,0,32,2.14,44,6.62a76.35,76.35,0,0,1,28.64,17.53,67.94,67.94,0,0,1,15.6,24.36,81.86,81.86,0,0,1,4.91,27.77q0,27.57-12.82,45.52A73.2,73.2,0,0,1,236.12,275c-14.53,5.34-30.56,7.26-48.08,7.26-5.13,0-8.55,0-10.68-.21s-5.13-.21-9.19-.21v68.59a2.66,2.66,0,0,1-2.35,3H124.36C122.65,353.43,121.8,352.57,121.8,350.65Zm46.58-181v71.8c3,.21,5.77.43,8.33.43H188A79.61,79.61,0,0,0,212.61,238a36.71,36.71,0,0,0,17.52-11.32c4.49-5.35,6.63-12.61,6.63-22a35.19,35.19,0,0,0-4.92-19,31,31,0,0,0-15-12.18,62.55,62.55,0,0,0-25.22-4.27c-5.55,0-10.47,0-14.53.21a49.8,49.8,0,0,0-8.76.21Z"/><path class="b" d="M313.26,182.06h37.39a4.8,4.8,0,0,1,4.49,3.42,21.39,21.39,0,0,1,1.28,5.34c.43,2.13.86,4.48,1.07,6.62.21,2.35.43,4.92.43,7.69a79.63,79.63,0,0,1,22.86-18.37,66.17,66.17,0,0,1,32.48-8.34,2.66,2.66,0,0,1,3,2.35V223.3c0,1.71-1.07,2.35-3.42,2.35a92.62,92.62,0,0,0-23.08,2.13,88.75,88.75,0,0,0-17.94,5.77,33.3,33.3,0,0,0-10.9,7.91v109c0,2.13-.86,3-2.78,3H316a3,3,0,0,1-3.41-2.57V231.63c0-5.13,0-10.47-.22-16s-.21-11.11-.43-16.66c0-4.92-.42-9.62-.85-14.53a2,2,0,0,1,1.5-2.35c0-.22.42-.22.64,0Z"/></svg>
+                <span>Premiere Pro</span>
+            </div>
+            <div class="skill" id="office" data-aos="fade-up" data-aos-delay="200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 16 16">
+                    <path d="M7.462 0H0v7.19h7.462zM16 0H8.538v7.19H16zM7.462 8.211H0V16h7.462zm8.538 0H8.538V16H16z"/>
+                  </svg>
+                <span>MS Office Suite</span>
+            </div>
+            <div class="skill" id="salesforce" data-aos="fade-up" data-aos-delay="250">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M248.9 245.6h-26.4c.7-5.2 3.3-14.1 13.6-14.1 6.8 0 12 3.8 12.7 14.1zm136.7-13.9c-.5 0-14.1-1.8-14.1 20s13.6 20 14.1 20c13 0 14.1-13.5 14.1-20 0-21.8-13.7-20-14.1-20zm-243.2 23.8a8.6 8.6 0 0 0 -3.3 7.3c0 4.8 2.1 6.1 3.3 7.1 4.7 3.7 15.1 2.1 20.9 1v-16.9c-5.3-1.1-16.7-2-20.9 1.7zM640 232c0 87.6-80 154.4-165.4 136.4-18.4 33-70.7 70.8-132.2 41.6-41.2 96.1-177.9 92.2-213.8-5.2C8.9 428.8-50.2 266.5 53.4 205.6 18.6 126.2 76 32 167.7 32a124.2 124.2 0 0 1 98.6 48.7c20.7-21.4 49.4-34.8 81.2-34.8 42.3 0 79 23.5 98.8 58.6C539 63.8 640 132.7 640 232zm-519.6 31.8c0-11.8-11.7-15.2-17.9-17.2-5.3-2.1-13.4-3.5-13.4-8.9 0-9.5 17-6.7 25.2-2.1 0 0 1.2 .7 1.6-.5 .2-.7 2.4-6.6 2.6-7.3a1.1 1.1 0 0 0 -.7-1.4c-12.3-7.6-40.7-8.5-40.7 12.7 0 12.5 11.5 15.4 17.9 17.2 4.7 1.6 13.2 3 13.2 8.7 0 4-3.5 7.1-9.2 7.1a31.8 31.8 0 0 1 -19-6.4c-.5-.2-1.4-.7-1.7 .7l-2.4 7.5c-.5 .9 .2 1.2 .2 1.4 1.8 1.4 10.3 6.6 22.8 6.6 13.2 0 21.4-7.1 21.4-18.1zm32-42.6c-10.1 0-18.7 3.2-21.4 5.2a1 1 0 0 0 -.2 1.4l2.6 7.1a1 1 0 0 0 1.2 .7c.7 0 6.8-4 16.9-4 4 0 7.1 .7 9.2 2.4 3.6 2.8 3.1 8.3 3.1 10.6-4.8-.3-19.1-3.4-29.4 3.8a16.9 16.9 0 0 0 -7.3 14.5c0 5.9 1.5 10.4 6.6 14.4 12.2 8.2 36.3 2 38.1 1.4 1.6-.3 3.5-.7 3.5-1.9v-33.9c0-4.6 .3-21.6-22.8-21.6zM199 200.2a1.1 1.1 0 0 0 -1.2-1.2H188a1.1 1.1 0 0 0 -1.2 1.2v79a1.1 1.1 0 0 0 1.2 1.2h9.9a1.1 1.1 0 0 0 1.2-1.2zm55.8 28.9c-2.1-2.3-6.8-7.5-17.7-7.5-3.5 0-14.2 .2-20.7 8.9-6.4 7.6-6.6 18.1-6.6 21.4 0 3.1 .2 14.3 7.1 21.2 2.6 2.9 9.1 8.2 22.8 8.2 10.8 0 16.5-2.4 18.6-3.8 .5-.2 .7-.7 .2-1.9l-2.4-6.8a1.3 1.3 0 0 0 -1.4-.7c-2.6 .9-6.4 2.8-15.3 2.8-17.4 0-16.9-14.7-16.9-16.7h37.2a1.2 1.2 0 0 0 1.2-.9c-.3 0 2.1-14.7-6.1-24.2zm36.7 52.7c13.2 0 21.4-7.1 21.4-18.1 0-11.8-11.7-15.2-17.9-17.2-4.1-1.7-13.4-3.4-13.4-8.9 0-3.8 3.3-6.4 8.5-6.4a38.1 38.1 0 0 1 16.7 4.2s1.2 .7 1.7-.5c.2-.7 2.4-6.6 2.6-7.3a1.1 1.1 0 0 0 -.7-1.4c-7.9-4.9-16.7-4.9-20.2-4.9-12 0-20.5 7.3-20.5 17.6 0 12.5 11.5 15.4 17.9 17.2 6.1 2 13.2 3.3 13.2 8.7 0 4-3.5 7.1-9.2 7.1a31.8 31.8 0 0 1 -19-6.4 1 1 0 0 0 -1.7 .7l-2.4 7.5c-.5 .9 .2 1.2 .2 1.4 1.7 1.4 10.3 6.6 22.8 6.6zM357.1 224c0-.7-.2-1.2-1.2-1.2h-11.8c0-.1 .9-8.9 4.5-12.5 4.2-4.2 11.8-1.6 12-1.6 1.2 .5 1.4 0 1.6-.5l2.8-7.8c.7-.9 0-1.2-.2-1.4-5.1-2-17.4-2.9-24.5 4.2-5.5 5.5-7 13.9-8 19.5h-8.5a1.3 1.3 0 0 0 -1.2 1.2l-1.4 7.8c0 .7 .2 1.2 1.2 1.2h8.2c-8.5 47.9-8.8 50.2-10.4 55.5-1.1 3.6-3.3 6.9-5.9 7.8-.1 0-3.9 1.7-9.6-.2 0 0-.9-.5-1.4 .7-.2 .7-2.6 6.8-2.8 7.5s0 1.4 .5 1.4c5.1 2 13 1.8 17.9 0 6.3-2.3 9.7-7.9 11.5-12.9 2.8-7.7 2.8-9.8 11.8-59.7h12.2a1.3 1.3 0 0 0 1.2-1.2zm53.4 16c-.6-1.7-5.1-18.1-25.2-18.1-15.3 0-23 10-25.2 18.1-1 3-3.2 14 0 23.5 .1 .3 4.4 18.1 25.2 18.1 15 0 22.9-9.6 25.2-18.1 3.2-9.6 1-20.5 0-23.5zm45.4-16.7c-5-1.7-16.6-1.9-22.1 5.4v-4.5a1.1 1.1 0 0 0 -1.2-1.2h-9.4a1.1 1.1 0 0 0 -1.2 1.2v55.3a1.1 1.1 0 0 0 1.2 1.2h9.6a1.1 1.1 0 0 0 1.2-1.2v-27.8c0-2.9 .1-11.4 4.5-15.1 4.9-4.9 12-3.4 13.4-3.1a1.6 1.6 0 0 0 1.4-.9 74 74 0 0 0 3.1-8 1.2 1.2 0 0 0 -.5-1.4zm46.8 54.1l-2.1-7.3c-.5-1.2-1.4-.7-1.4-.7-4.2 1.8-10.2 1.9-11.3 1.9-4.6 0-17.2-1.1-17.2-19.8 0-6.2 1.9-19.8 16.5-19.8a34.9 34.9 0 0 1 11.5 1.7s.9 .5 1.2-.7c.9-2.6 1.6-4.5 2.6-7.5 .2-.9-.5-1.2-.7-1.2-11.6-3.9-22.3-2.5-27.8 0-1.6 .7-16.2 6.5-16.2 27.5 0 2.9-.6 30.1 28.9 30.1a44.5 44.5 0 0 0 15.5-2.8 1.3 1.3 0 0 0 .5-1.4zm53.9-39.5c-.8-3-5.4-16.2-22.4-16.2-16 0-23.5 10.1-25.6 18.6a38.6 38.6 0 0 0 -1.7 11.8c0 25.9 18.8 29.4 29.9 29.4 10.8 0 16.5-2.4 18.6-3.8 .5-.2 .7-.7 .2-1.9l-2.4-6.8a1.3 1.3 0 0 0 -1.4-.7c-2.6 .9-6.4 2.8-15.3 2.8-17.4 0-16.9-14.7-16.9-16.7h37.2a1.3 1.3 0 0 0 1.2-.9c-.2 0 .9-7.1-1.4-15.5zm-23.3-6.4c-10.3 0-13 9-13.6 14.1H546c-.9-11.9-7.6-14.1-12.7-14.1z"/></svg>
+                <span>Salesforce</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="projects">
+        <h1 data-aos="fade-up" data-aos-delay="50">Projects</h1>
+        <div>
+            <div class="project" id="ibm" data-aos="fade-up" data-aos-delay="50">
+                <img src="images/hnn.png" alt="...">
+                <h1>HNN</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ullam est perferendis, magni excepturi recusandae vel et nihil perspiciatis ab dolorem exercitationem, optio fugiat a delectus, omnis illo sunt id ipsum quos tempore veritatis inventore sit voluptatum. Blanditiis, fuga deleniti soluta vero voluptate odit molestiae adipisci obcaecati, officiis, labore nesciunt accusantium. Cum expedita quis animi delectus cumque ut ipsum, dolorem suscipit soluta repellat iure nemo similique corrupti, ipsam consequuntur atque iusto temporibus ea sapiente quaerat quia id unde obcaecati at! Corrupti vel saepe repellendus, illum laboriosam culpa dolorum porro non provident temporibus, quibusdam sunt distinctio et consectetur nobis, eaque quisquam?</p>
+                <div class="buttons">
+                    <a id="live" href="https://hnn.pages.dev/" target="_blank">See this live</a>
+                    <a id="code" href="https://github.com/S0mSahoo/IBM_Frontend" target="_blank">View code</a>
+                </div>
+            </div>
+            <div class="project" id="cinepulse" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/cinepulse.png" alt="...">
+                <h1>CinePulse</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ullam est perferendis, magni excepturi recusandae vel et nihil perspiciatis ab dolorem exercitationem, optio fugiat a delectus, omnis illo sunt id ipsum quos tempore veritatis inventore sit voluptatum. Blanditiis, fuga deleniti soluta vero voluptate odit molestiae adipisci obcaecati, officiis, labore nesciunt accusantium. Cum expedita quis animi delectus cumque ut ipsum, dolorem suscipit soluta repellat iure nemo similique corrupti, ipsam consequuntur atque iusto temporibus ea sapiente quaerat quia id unde obcaecati at! Corrupti vel saepe repellendus, illum laboriosam culpa dolorum porro non provident temporibus, quibusdam sunt distinctio et consectetur nobis, eaque quisquam?</p>
+                <div class="buttons">
+                    <a id="live" href="https://s0msahoo.github.io/cinepulse/" target="_blank">See this live</a>
+                    <a id="code" href="https://github.com/S0mSahoo/cinepulse" target="_blank">View code</a>
+                </div>
+            </div>
+            <div class="project" id="freshfeed" data-aos="fade-up" data-aos-delay="50">
+                <img src="images/freshfeed.png" alt="...">
+                <h1>FreshFeed</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ullam est perferendis, magni excepturi recusandae vel et nihil perspiciatis ab dolorem exercitationem, optio fugiat a delectus, omnis illo sunt id ipsum quos tempore veritatis inventore sit voluptatum. Blanditiis, fuga deleniti soluta vero voluptate odit molestiae adipisci obcaecati, officiis, labore nesciunt accusantium. Cum expedita quis animi delectus cumque ut ipsum, dolorem suscipit soluta repellat iure nemo similique corrupti, ipsam consequuntur atque iusto temporibus ea sapiente quaerat quia id unde obcaecati at! Corrupti vel saepe repellendus, illum laboriosam culpa dolorum porro non provident temporibus, quibusdam sunt distinctio et consectetur nobis, eaque quisquam?</p>
+                <div class="buttons">
+                    <a id="code" href="https://github.com/S0mSahoo/fresh-feed" target="_blank">View code</a>
+                </div>
+            </div>
+            <div class="project" id="sidcup" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/sidcup.png" alt="...">
+                <h1>Sidcup Family Golf</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ullam est perferendis, magni excepturi recusandae vel et nihil perspiciatis ab dolorem exercitationem, optio fugiat a delectus, omnis illo sunt id ipsum quos tempore veritatis inventore sit voluptatum. Blanditiis, fuga deleniti soluta vero voluptate odit molestiae adipisci obcaecati, officiis, labore nesciunt accusantium. Cum expedita quis animi delectus cumque ut ipsum, dolorem suscipit soluta repellat iure nemo similique corrupti, ipsam consequuntur atque iusto temporibus ea sapiente quaerat quia id unde obcaecati at! Corrupti vel saepe repellendus, illum laboriosam culpa dolorum porro non provident temporibus, quibusdam sunt distinctio et consectetur nobis, eaque quisquam?</p>
+                <div class="buttons">
+                    <a href="https://s0msahoo.github.io/Sidcup/" id="live" target="_blank">See this live</a>
+                    <a href="https://github.com/S0mSahoo/Sidcup" id="code" target="_blank">View code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="contact">
+        <h1 data-aos="fade-up" data-aos-delay="50">Get In <span>Touch</span></h1>
+        <div class="c_icons">
+            <div data-aos="fade-up" data-aos-delay="50">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                  </svg>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="c_text">
+            <div data-aos="fade-up" data-aos-delay="50">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                  </svg>
+                <span>sompriyansu308@gmail.com</span>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg>
+                <span>+91 9178199203</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">Made with&nbsp;<svg xmlns="http://www.w3.org/2000/svg" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+      </svg>&nbsp;by&nbsp;<span>Som</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

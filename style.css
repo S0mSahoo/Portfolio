@@ -1,0 +1,39 @@
+:root {
+    --light: rgb(75, 75, 75);
+    --dark: rgb(255, 255, 255);
+    --dark_bg: #123;
+    --primary: rgb(53, 131, 208);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* border: 2px solid red; */
+    background-color: var(--dark);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        color: var(--light);
+    }
+}
+
+.dark-mode {
+    background-color: var(--dark_bg);
+    color: var(--dark);
+
+    a {
+        color: var(--dark);
+    }
+}

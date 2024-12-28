@@ -22,7 +22,7 @@
     /* border: 2px solid red; */
     justify-content: center;
     gap: 2rem;
-    & > div{
+    & > a{
         /* border: 2px solid red; */
         width: 50px;
         svg{

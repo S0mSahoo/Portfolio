@@ -108,10 +108,7 @@
     cursor: pointer;
     scale: 1.05;
     background-color: var(--primary);
-
-    a {
-        color: var(--dark);
-    }
+    color: var(--dark);
 }
 
 #resume_btn:active {
